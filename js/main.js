@@ -9,7 +9,7 @@ function getRandom (min,max){
   max = Math.floor(max);
   return Math.floor(Math.random() * (max-min+1)+min);
 }
-console.log(getRandom (0.5,1.2));
+getRandom (0.5,1.2);
 
 function length (text, max){
   if (text.length<=max){return true;}
