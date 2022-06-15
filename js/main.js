@@ -37,4 +37,3 @@ const createPosts = ()=>{
 
 // eslint-disable-next-line no-unused-vars
 const posts = Array.from({length: 25}, createPosts);
-console.log(posts);
