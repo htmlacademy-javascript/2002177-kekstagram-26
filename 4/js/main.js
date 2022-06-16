@@ -23,7 +23,7 @@ const createPosts = ()=>{
   id.splice(id.indexOf(idNumber),1);
   const urlNumber = getRandomArrayElement(i);
   i.splice(i.indexOf(urlNumber),1);
-  const createOnePost =()=>  ({
+  return  {
     id: idNumber,
     url: 'photos/urlNumber.jpg',
     description: getRandomArrayElement(description),
@@ -31,10 +31,9 @@ const createPosts = ()=>{
     message: [getRandomArrayElement(comments), getRandomArrayElement(comments)],
     avatar: 'img/avatar-getRandomPositiveInteger(1,6).svg',
     name: getRandomArrayElement(names),
-  });
-  createOnePost();
+  };
 };
 
 
+// eslint-disable-next-line no-unused-vars
 const posts = Array.from({length: 25}, createPosts);
-
