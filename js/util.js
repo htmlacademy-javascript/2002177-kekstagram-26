@@ -1,9 +1,3 @@
-import {description, comments, names} from './data';
-
-const ID_COUNT = 25;
-const I_COUNT = 25;
-const POST_COUNT = 25;
-
 function getRandomPositiveInteger (a, b) {
   const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
   const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
@@ -31,20 +25,5 @@ function deleteArrayElement (arr){
   return number;
 }
 
-const id = createArray(ID_COUNT);
-const i = createArray(I_COUNT);
 
-const createPosts = ()=>({
-  id: deleteArrayElement (id),
-  url: `photos/${deleteArrayElement(i)}.jpg`,
-  description: getRandomArrayElement(description),
-  likes: getRandomPositiveInteger(15,200),
-  message: Array.from({length: 2}, () => getRandomArrayElement(comments)),
-  avatar: `img/avatar-${getRandomPositiveInteger(1,6)}.svg`,
-  name: getRandomArrayElement(names),
-});
-
-const posts = Array.from({length: POST_COUNT}, createPosts);
-
-
-export {getRandomPositiveInteger, checkStringLength, createArray, getRandomArrayElement, deleteArrayElement, createPosts, posts};
+export {getRandomPositiveInteger, checkStringLength, createArray, getRandomArrayElement, deleteArrayElement};
