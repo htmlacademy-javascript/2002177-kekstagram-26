@@ -1,6 +1,9 @@
 import './data';
 import './util';
+import './picture';
 import {createPosts} from './data';
+import {createPhoto} from './picture';
 
-const POST_COUNT = 25;
-createPosts (POST_COUNT);
+
+const photo = createPosts(1);
+createPhoto(photo);
