@@ -1,9 +1,12 @@
-import './data';
+import './data.js';
+import './full-photo.js';
+import './picture.js';
 import './util';
-import './picture';
-import {createPosts} from './data';
-import {createPhoto} from './picture';
+import {createPhoto} from './picture.js';
+import {createPosts} from './data.js';
+
+const POST_COUNT = 25;
+const arrayPosts = createPosts(POST_COUNT);
+createPhoto(arrayPosts);
 
 
-const photo = createPosts(1);
-createPhoto(photo);
