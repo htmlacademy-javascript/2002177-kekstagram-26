@@ -8,6 +8,7 @@ function getRandomPositiveInteger (a, b) {
 function checkStringLength (string, length) {
   return string.length <= length;
 }
+checkStringLength('fsgrh', 5);
 
 function createArray (length) {
   const arr = [];
@@ -26,4 +27,4 @@ function deleteArrayElement (arr){
 }
 
 
-export {getRandomPositiveInteger, checkStringLength, createArray, getRandomArrayElement, deleteArrayElement};
+export { getRandomPositiveInteger, createArray, getRandomArrayElement, deleteArrayElement };
