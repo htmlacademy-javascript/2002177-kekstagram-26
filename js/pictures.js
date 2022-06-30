@@ -1,7 +1,6 @@
-
 import {createPosts} from './data.js';
 
-function createPhoto () {
+function createPhotos () {
   const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
   const usersPhoto = document.querySelector('.pictures');
   const pictureFragment = document.createDocumentFragment();
@@ -11,12 +10,10 @@ function createPhoto () {
     photo.querySelector('.picture__img').src = url;
     photo.querySelector('.picture__likes').textContent = likes;
     photo.querySelector('.picture__comments').textContent = message.length;
-    pictureFragment.append(pictureFragment);
+    pictureFragment.append(photo);
   });
 
   usersPhoto.append(pictureFragment);
 }
 
-createPhoto();
-
-
+export {createPhotos};
