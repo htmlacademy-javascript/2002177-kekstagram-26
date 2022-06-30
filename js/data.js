@@ -14,7 +14,7 @@ const createOnePost = ()=>({
   url: `photos/${deleteArrayElement(i)}.jpg`,
   description: getRandomArrayElement(description),
   likes: getRandomPositiveInteger(15,200),
-  message: Array.from({length: 6}, () => getRandomArrayElement(comments)),
+  message: Array.from({length: 2}, () => getRandomArrayElement(comments)),
   avatar: `img/avatar-${getRandomPositiveInteger(1,6)}.svg`,
   name: getRandomArrayElement(names),
 });
@@ -23,4 +23,4 @@ function createPosts (count) {
   Array.from({length: count}, createOnePost);
 }
 
-export {createPosts, createOnePost, names, i, comments};
+export {createPosts};
